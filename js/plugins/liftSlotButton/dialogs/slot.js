@@ -25,9 +25,9 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
       var liftSlotWrapper = editor.document.createElement('div');
 
       // Set element attribute and text by getting the defined field values.
-      liftSlotWrapper.setAttribute('id', dialog.getValueOf('tab-basic', 'lift-slot'));
+      liftSlotWrapper.setAttribute('id', dialog.getValueOf('tab-basic', 'lift-slot')).addClass('lift-placeholder-slot');
       var liftID = dialog.getValueOf('tab-basic', 'lift-slot');
-      liftSlotWrapper.setText('[Lift Slot Selector: ' + '#'liftID + ']');
+      liftSlotWrapper.setText('[Lift Slot Selector: #' + liftID + ']');
 
       editor.insertElement(liftSlotWrapper);
     }
