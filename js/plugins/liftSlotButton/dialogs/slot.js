@@ -3,7 +3,7 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
   return {
 
     // Basic properties of the dialog window: title, minimum size.
-    title: 'Lift slot Properties',
+    title: 'Lift slot properties',
     minWidth: 400,
     minHeight: 200,
 
@@ -18,6 +18,16 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
         type: 'text',
         id: 'lift-slot',
         label: 'Lift slot placeholder ID',
+        validate: CKEDITOR.dialog.validate.notEmpty( "Slot cannot be empty." ),
+
+        // Called by the main setupContent method call on dialog initialization.
+            setup: function( element ) {
+              this.setValue( element.getText() );
+            },
+         // Called by the main commitContent method call on dialog confirmation.
+            commit: function( element ) {
+              element.setText( this.getValue() );
+            }
       }]
     }],
     onOk: function () {
@@ -30,6 +40,8 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
       liftSlotWrapper.setText('[Lift Slot Selector: #' + liftID + ']');
 
       editor.insertElement(liftSlotWrapper);
-    }
+    },
+
+    
   };
 });

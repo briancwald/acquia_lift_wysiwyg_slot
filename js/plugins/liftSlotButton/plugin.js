@@ -10,6 +10,8 @@ CKEDITOR.plugins.add('liftSlotButton', {
     // Define an editor command that opens our dialog window.
     editor.addCommand('liftSlotButton', new CKEDITOR.dialogCommand('slotDialog'));
 
+    editor.addContentsCss( this.path + 'styles/slot.css' );
+
     // Create a toolbar button that executes the above command.
     editor.ui.addButton('liftSlotButton', {
 

@@ -1,0 +1,11 @@
+.lift-placeholder-slot {
+  padding:10px;
+  background-color:#018dc7;
+  background-image:url(../icons/rocket.png);
+  color:#fff;
+  text-align: center;
+}
+
+.lift-placeholder-slot-id {
+	font-weight:bold;
+}
