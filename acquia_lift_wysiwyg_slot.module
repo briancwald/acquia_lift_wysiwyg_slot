@@ -16,9 +16,8 @@ function acquia_lift_wysiwyg_slot_help($route_name, RouteMatchInterface $route_m
     case 'help.page.acquia_lift_wysiwyg_slot':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Button for inserting a Lift slot into CKeditor.') . '</p>';
-      $output .= '<p>' . t('To enable, you must add the Lift slot button to your active CKeditor editor profile.') '</p>';
-      $output .= '<p><strong>' . t('REQUIRED: if tag filtering is on, you must allow at minimum: <div data-lift-slot> as an allowed tag or it will be filtered out on save.') '</strong></p>';
+      $output .= '<p>' . t('Button for inserting a Lift slot placeholder into CKeditor.') . '</p>';
+      $output .= '<p>' . t('To enable - you must add the Lift slot button to your active CKeditor editor profile.') . '</p>';
       return $output;
 
     default:

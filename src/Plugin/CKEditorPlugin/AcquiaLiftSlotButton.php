@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains \Drupal\acquia_lift_wysiwyg_slot\Plugin\CKEditorPlugin\AcquiaLiftSlotButton.
+ */
+
 namespace Drupal\acquia_lift_wysiwyg_slot\Plugin\CKEditorPlugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;
@@ -30,11 +35,12 @@ class AcquiaLiftSlotButton extends CKEditorPluginBase {
   public function getButtons() {
     // Make sure that the path to the image matches the file structure of
     // the CKEditor plugin you are implementing.
+    $modulePath = drupal_get_path('module', 'acquia_lift_wysiwyg_slot');
     return [
       'liftSlotButton' => [
         'label' => t('Acquia lift slot button'),
-        'image' => drupal_get_path('module', 'acquia_lift_wysiwyg_slot') . '/js/plugins/LiftSlotButton/icons/rocket.png',
-      ],
+        'image' => $modulePath . '/js/plugins/liftSlotButton/icons/rocket.png',
+      ]
     ];
   }
 
@@ -44,7 +50,8 @@ class AcquiaLiftSlotButton extends CKEditorPluginBase {
   public function getFile() {
     // Make sure that the path to the plugin.js matches the file structure of
     // the CKEditor plugin you are implementing.
-    return drupal_get_path('module', 'acquia_lift_wysiwyg_slot') . '/js/plugins/LiftSlotButton/plugin.js';
+    $modulePath = drupal_get_path('module', 'acquia_lift_wysiwyg_slot');
+     return $modulePath . '/js/plugins/liftSlotButton/plugin.js';
   }
 
   /**
