@@ -36,12 +36,12 @@ class AcquiaLiftSlotButton extends CKEditorPluginBase {
     // Make sure that the path to the image matches the file structure of
     // the CKEditor plugin you are implementing.
     $modulePath = drupal_get_path('module', 'acquia_lift_wysiwyg_slot');
-    return [
-      'liftSlotButton' => [
+    return array(
+      'liftSlotButton' => array(
         'label' => t('Acquia lift slot button'),
         'image' => $modulePath . '/js/plugins/liftSlotButton/icons/rocket.png',
-      ]
-    ];
+      ),
+    );
   }
 
   /**
