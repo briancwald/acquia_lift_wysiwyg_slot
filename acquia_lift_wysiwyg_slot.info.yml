@@ -1,0 +1,7 @@
+name: Acquia Lift Wysiwyg Slot
+type: module
+description: Button for inserting a Lift slot into CKeditor.
+core: 8.x
+package: Acquia
+dependencies:
+  - acquia_lift
