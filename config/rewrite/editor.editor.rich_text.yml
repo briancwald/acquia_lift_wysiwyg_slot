@@ -1,0 +1,8 @@
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: 'Acquia Lift'
+          items:
+            - liftSlotButton
