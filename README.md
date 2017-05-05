@@ -1,6 +1,6 @@
 # Acquia Lift WYSIWYG Slot placeholder
 
-This simple Drupal 8 module is gives you the ability to add a lift placeholder to your CKeditor profile for easier targetting with the dynamic slot selector. Essentially this just provides a visual cue for easily grabbing the slot name.
+This simple Drupal 8 module is gives you the ability to add a lift placeholder to your CKeditor profile for easier targetting with the dynamic slot selector. Essentially this just provides a visual cue for easily grabbing the slot name without having to inspect the code.
 
 ## Setup
 
