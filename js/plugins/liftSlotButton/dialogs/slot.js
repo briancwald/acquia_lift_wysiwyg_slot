@@ -19,7 +19,7 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
         id: 'lift-slot',
         label: 'Lift slot placeholder ID',
         validate: CKEDITOR.dialog.validate.notEmpty( "Slot cannot be empty." ),
-
+s
         // Called by the main setupContent method call on dialog initialization.
             setup: function( element ) {
               this.setValue( element.getText() );
@@ -37,7 +37,7 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
       // Set element attribute and text by getting the defined field values.
       liftSlotWrapper.setAttribute('id', dialog.getValueOf('tab-basic', 'lift-slot')).addClass('lift-placeholder-slot');
       var liftID = dialog.getValueOf('tab-basic', 'lift-slot');
-      liftSlotWrapper.setText('[Lift Slot Selector: #' + liftID + ']');
+      liftSlotWrapper.setText('Lift Slot ID: #' + liftID);
 
       editor.insertElement(liftSlotWrapper);
     },

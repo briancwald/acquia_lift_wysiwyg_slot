@@ -1,11 +1,16 @@
 .lift-placeholder-slot {
   padding:10px;
   background-color:#018dc7;
-  background-image:url(../icons/rocket.png);
+  border:2px dashed #fff;
   color:#fff;
   text-align: center;
+  display:inline-block;
+  vertical-align: middle;
+  max-width: 100%;
 }
 
-.lift-placeholder-slot-id {
-	font-weight:bold;
+.lift-placeholder-slot:before {
+	content: url(../icons/rocket-small.png);
+	padding-top:10px;
+	padding-right:5px;
 }
