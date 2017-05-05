@@ -11,3 +11,8 @@ This simple Drupal 8 module is gives you the ability to add a lift placeholder t
 
 ## Basic Demo
 ![](https://dl.dropboxusercontent.com/u/8476966/lift-wysiwyg.gif)
+
+
+## To Do 
+
+* Add 'advanced tab' that uses the API to get exisiting slot information and adds the slot directly in.
