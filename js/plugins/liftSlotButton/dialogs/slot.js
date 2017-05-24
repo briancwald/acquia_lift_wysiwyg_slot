@@ -15,10 +15,12 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
       // The tab content.
       elements: [{
         // Text input field for the slot id.
-        type: 'text',
+        type: 'select',
+        default: editor.config.AcquiaLiftSlotButton_slots[0][1],
+        items: editor.config.AcquiaLiftSlotButton_slots,
         id: 'lift-slot',
-        label: 'Lift slot placeholder ID',
-        validate: CKEDITOR.dialog.validate.notEmpty( "Slot cannot be empty." )
+        label: 'Lift slot',
+        validate: CKEDITOR.dialog.validate.notEqual('none', 'Slot cannot be empty.')
       }]
     }],
     onOk: function () {
@@ -31,7 +33,7 @@ CKEDITOR.dialog.add('slotDialog', function (editor) {
       liftSlotWrapper.setText('Lift Slot ID: #' + liftID );
 
       editor.insertElement(liftSlotWrapper);
-    },
+    }
 
     
   };

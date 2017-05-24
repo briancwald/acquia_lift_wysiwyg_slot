@@ -6,7 +6,6 @@ CKEDITOR.plugins.add('liftSlotButton', {
 
   // The plugin initialization logic goes inside this method.
   init: function (editor) {
-
     // Define an editor command that opens our dialog window.
     editor.addCommand('liftSlotButton', new CKEDITOR.dialogCommand('slotDialog'));
 
