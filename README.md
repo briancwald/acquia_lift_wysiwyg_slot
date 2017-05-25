@@ -10,5 +10,5 @@ This simple Drupal 8 module is grabs the list of all the lift slots on your acco
 
 
 ## Basic Demo
-![](https://github.com/briancwald/acquia_lift_wysiwyg_slot)
+![](https://dl.dropboxusercontent.com/u/8476966/slot-rec.gif)
 
