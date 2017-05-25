@@ -107,7 +107,7 @@ class AcquiaLiftSlotButton extends CKEditorPluginBase {
     $slot_manager = $client->getSlotManager();
     $options = [];
     foreach ($slot_manager->query() as $slot) {
-      $options[] = [$slot->getLabel(), $slot->getId()];
+      $options[] = [$slot->getLabel() . ' (' . implode(',', $slot->getVisibility()->getPages()) . ')', $slot->getId()];
     }
 
     if (empty($options)) {
