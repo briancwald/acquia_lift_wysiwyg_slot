@@ -6,4 +6,4 @@ package: Acquia
 dependencies:
   - acquia_contenthub
   - acquia_lift
-  - config_rewrite
+  - ckeditor

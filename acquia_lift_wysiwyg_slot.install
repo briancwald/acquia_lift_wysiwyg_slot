@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Defines install routines for Acquia Lift Wysiwyg Slot.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function acquia_lift_wysiwyg_slot_install() {
+  if ($config = \Drupal::configFactory()->getEditable('editor.editor.rich_text')) {
+    $data = $config->getRawData();
+    $data['settings']['toolbar']['rows'][0][] = [
+      'name' => 'Acquia Lift',
+      'items' => [
+        'liftSlotButton',
+      ]
+    ];
+    $config->setData($data);
+    $config->save(TRUE);
+  }
+}
