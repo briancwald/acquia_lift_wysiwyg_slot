@@ -99,7 +99,14 @@ class AcquiaLiftSlotButton extends CKEditorPluginBase {
 
     $client = new Lift($lift_account, $lift_site_id, $api_key, $secret_key, ['base_url' => $url]);
 
-    $pong = $client->ping();
+    try {
+      $pong = $client->ping();
+    }
+    catch (\Exception $e) {
+      drupal_set_message('Unable to reach Lift, please check that the module is configured correctly.', 'error');
+      return $default_config;
+    }
+
     if (!$pong) {
       return $default_config;
     }
